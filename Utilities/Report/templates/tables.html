@@ -1,0 +1,15 @@
+
+<table class="responstable">
+    <tr>
+        {% for column in columns %}
+            <th>{{ column }}</th>
+        {% endfor %}
+    </tr>
+    {% for row in rows %}
+        <tr onclick="toggleClass(this,'selected')">
+            {% for item in row %}
+                <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
